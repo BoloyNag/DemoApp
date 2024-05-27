@@ -1,7 +1,32 @@
 pipeline {
     agent any
 
+
     stages {
+		stage('Check Build') {
+			steps {
+				 echo 'The build is running fine'
+				 sh 'ls'
+				 echo "Current Working Directory: ${pwd()}"
+			}
+		 }
+		 
+		stage('Docker image and container cleanup') {
+			steps {
+				 script {
+					 // To delete the existing image and running container
+					 sh 'docker stop frontend || true'
+					 sh 'docker rm frontend || true'
+					 sh 'docker rmi frontend:latest || true'
+					 
+					 sh 'docker stop backend || true'
+					 sh 'docker rm backend || true'
+					 sh 'docker rmi backend:latest || true'
+				 }
+			}
+		 }
+	
+	
         stage('Build Frontend Image') {
             steps {
                 script {
