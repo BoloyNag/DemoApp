@@ -1,0 +1,6 @@
+Step 1: create a keypair locally using "ssh-keygen -t rsa -b 2048 -f keypair" command
+Step 2: execute ec2.tf to create resource using terraform, ec2.tf will create resource, add inbound rules
+Step 3: ssh into ec2 install ansible, clone repo then install docker and jenkins using ec2_config.yml file after navigating into cloned repo
+Step 4: Launch jenkins on ec2 and add dockerhub credentials and install docker and github plugins
+Step 5: Create a pipeline job, add jenkins file from repo
+Step 6: Execute job
