@@ -5,7 +5,7 @@ pipeline {
         stage('Build Frontend Image') {
             steps {
                 script {
-                    docker.build("frontend:latest", "./frontend")
+                    docker.build("frontend:latest", "./src/frontend")
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Build Backend Image') {
             steps {
                 script {
-                    docker.build("backend:latest", "./backend")
+                    docker.build("backend:latest", "./src/backend")
                 }
             }
         }
