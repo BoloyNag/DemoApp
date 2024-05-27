@@ -30,7 +30,7 @@ pipeline {
         stage('Build Frontend Image') {
             steps {
                 script {
-                    docker.build("frontend:latest", "./src/frontend")
+                    sh 'docker build -t frontend:latest -f "./src/frontend"'
                 }
             }
         }
@@ -38,7 +38,7 @@ pipeline {
         stage('Build Backend Image') {
             steps {
                 script {
-                    docker.build("backend:latest", "./src/backend")
+                    sh 'docker build -t backend:latest -f "./src/backend"'
                 }
             }
         }
