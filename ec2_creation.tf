@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key = "ASIA5B47FFX265VTLWF2" ## replace with your access key
-  secret_key = "hkHG3AFhh6KPw5l2XydfbrCEGL8ZTwG1nzVy8SND" ## replace with your secret key
-  token      = "FwoGZXIvYXdzEHAaDOxNYdWeJ9qV92IhOCK2AfMjYMNPvaH9/rO6/oEOJocZKDj2tZYCmoLFY4AUqzqFDUNlUccqR3ZOGpbN2heqwdX0JxNwxewLMudpkdFlGOVvjGDrmv6i73Yp6De9rj640uem4iIHHG/AS/AoIE0G98m3UfSiIBgnhxoH75dTne8Ro1LzwKHULBhtMypdXiuXhkETqiBef+1i4PQgAn7GuhBXQn+VHNpTpY687a++UraoQIeyuCdq717xKwZ+Gq4JrsVgNhZFKNSp0rIGMi2TY8OJk52Fj19gusrm+eEYePAdB9bJgc/qyzOVAxADyKTfMI1mPsJOFj96VzQ=" ## replace with token 
+  access_key = "ASIA5B47FFX2666QTHRM" ## replace with your access key
+  secret_key = "DzEjvceDJ8lxwC7p6PQmt3xs911uSzeYwUcOmFmc" ## replace with your secret key
+  token      = "FwoGZXIvYXdzEOj//////////wEaDBU9zH2eFzm0k9LGgyK2AXevtXlrq6hkuKZOi56PF3CxgPsWSql5f6Z0vQphlmNLF7C1umr5CVPUUhFE6Gqjwkt+zJxVIYu1xgncmgPCBg6kCzOKDFXFF4e9hc11OjR8V8COHtaEF3nxRDZ283vi3Q1HpriHR9yZFt5eP1lp+iEeC5W9KpVwPtlbJfhS1HkuCDlENqNtQm0MI6P/rDE1Po/TDyvj7V9vPSDg4YNs9YebvH3EdYDTUvvAU5ap/H32Q/UZreqkKLXa7LIGMi2Y0IhHQUPcPkBECdy75fb55o744c397BiPQkSAucv0wAQ6/v7Af9+lVOSQ1uw=" ## replace with token 
   region     = "us-east-1"
 }
 
@@ -69,9 +69,9 @@ resource "aws_instance" "jenkins_server" {
   }
   
   user_data = <<-EOF
-		#!/bin/bash -v
-		apt-get update
-		apt-get install -y ansible
-		git clone https://github.com/BoloyNag/DemoApp.git
-		EOF
+				 #!/bin/bash -v
+				 apt-get update
+				 apt-get install -y ansible
+				 git clone https://github.com/BoloyNag/DemoApp.git
+				EOF
 }
